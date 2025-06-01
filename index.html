@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kartu Ucapan Untuk Destiar</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to bottom, #ffe0f0, #ffeefd);
+      color: #333;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      padding: 20px;
+      max-width: 400px;
+      background: #fff;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255, 105, 180, 0.3);
+      transition: all 0.5s ease;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    h1 {
+      font-size: 1.8em;
+      color: #ff69b4;
+    }
+
+    p {
+      font-size: 1.1em;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 20px;
+      background-color: #ffb6c1;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      font-size: 1em;
+      color: white;
+      cursor: pointer;
+      box-shadow: 0 5px 15px rgba(255, 105, 180, 0.3);
+      transition: background-color 0.3s;
+    }
+
+    button:hover {
+      background-color: #ff69b4;
+    }
+
+    img {
+      width: 120px;
+      margin-top: 10px;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    audio {
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container" id="welcome">
+    <h1>Hai kamu 💌</h1>
+    <p>Ada sesuatu spesial buat kamu hari ini~</p>
+    <button onclick="showCard()">Buka Kartu</button>
+  </div>
+
+  <div class="container hidden" id="card">
+    <img src="https://cdn-icons-png.flaticon.com/512/833/833472.png" alt="Hati Lucu">
+    <h1>Terima kasih ya 🌟</h1>
+    <p>
+      Makasih udah kerja keras hari ini ya~<br/>
+      Aku tahu pasti capek banget, tapi kamu keren banget bisa terus semangat sampai akhir.<br/><br/>
+      Istirahat yang cukup malam ini, dan semoga besok lebih cerah & ringan buat kamu 💛<br/><br/>
+      Aku bangga sama kamu :)
+    </p>
+    <audio controls>
+      <source src="https://rr1---sn-npoldn7s.googlevideo.com/videoplayback?expire=1748817009&ei=EYA8aOq3E8j74-EPudPQgQw&ip=139.228.33.2&id=o-AF7SIDAsn9g_UGxgGEIbW95ic79ql30ckUoJfLOmB5Kc&itag=251&source=youtube&requiressl=yes&xpc=EgVo2aDSNQ%3D%3D&gcr=id&bui=AY1jyLOoVUv6msSy9FpDhmGPPkdkan2eSPuTfpakjBktydNyRQGtCH2_VMATUYuEEDQPwXIwbR8M9Sww&vprv=1&svpuc=1&mime=audio%2Fwebm&ns=bgphF_4t2b3JtUtwHFNqBAYQ&rqh=1&gir=yes&clen=3163192&dur=183.301&lmt=1715030568395921&keepalive=yes&lmw=1&c=TVHTML5&sefc=1&txp=2318224&n=XznITleIz8Kn6w&sparams=expire%2Cei%2Cip%2Cid%2Citag%2Csource%2Crequiressl%2Cxpc%2Cgcr%2Cbui%2Cvprv%2Csvpuc%2Cmime%2Cns%2Crqh%2Cgir%2Cclen%2Cdur%2Clmt&sig=AJfQdSswRQIgfzu4Tsvjt1I4nEbcJVuooBF8iSvYJ9Z6A3Y-j0H7yuwCIQCx3JmO08fjbH7AwDdazQQso1vKyOxEFfjEGH1mw3pzXA%3D%3D&rm=sn-4pgnuhxqp5-n0cs7l,sn-4pgnuhxqp5-jb3r76,sn-npo6d7e&rrc=79,79,104&fexp=24350590,24350737,24350827,24350961,24351063,24351173,24351312,24351314,24351495,24351528,24351594,24351638,24351658,24351661,24351662,24351759,24351789,24351864,24351907,24352012,24352018,24352020&req_id=7c9daba6647aa3ee&rms=nxu,au&redirect_counter=3&cms_redirect=yes&cmsv=e&ipbypass=yes&met=1748795429,&mh=JY&mip=103.143.244.30&mm=30&mn=sn-npoldn7s&ms=nxu&mt=1748795067&mv=m&mvi=1&pl=24&lsparams=ipbypass,met,mh,mip,mm,mn,ms,mv,mvi,pl,rms&lsig=APaTxxMwRQIhALTjoy40tnN9BwrUWdwX8M0kTazAkeHXDQY4JjqgUuN2AiBXXc2lPYPzJUgIh4RTmSFa27G8DlFS1lPTrPrOiJJxfg%3D%3D" type="audio/mp3">
+      Browser kamu tidak mendukung audio.
+    </audio>
+    <button onclick="alert('Semangat terus ya 💖')">Semangat terus!</button>
+  </div>
+
+  <script>
+    function showCard() {
+      document.getElementById("welcome").classList.add("hidden");
+      document.getElementById("card").classList.remove("hidden");
+    }
+  </script>
+</body>
+</html>
